@@ -11,6 +11,7 @@ export default function ( { dispatch } ) {
     .then(function(response) {
       // create a new action with the old type but replace the promise with response
       const newAction = {... action, payload: response }
+      dispatch(newAction);
     });
   }
 }
